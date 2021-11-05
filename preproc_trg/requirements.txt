@@ -1,0 +1,11 @@
+pip install scikit-learn
+pip install pandas
+pip install pickle
+pip install re
+pip install string
+pip install warnings
+pip install numpy
+pip install lime 
+pip install pyspark 
+pip install nltk
+

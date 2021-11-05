@@ -1,0 +1,11 @@
+pip install requests
+pip install json
+pip install KafkaProducer
+pip install mysql.connector
+pip install time
+pip install pandas
+pip install sys
+pip install random
+
+
+
