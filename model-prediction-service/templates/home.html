@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname"><h2>Machine Learning App with Flask</h2></div>
+		<h2>IIITH - Great Learning Capstone Project</h2>
+		<h2>News Article Classifier</h2>
+	
+	</div>
+	</header>
+
+	<div class="ml-container">
+		<form action="{{ url_for('predict')}}" method="POST">
+	      	  <p>Enter Your Tile Message Here</p>
+	 	  <input type="text" name="message" id="message" required="required"><br/>
+	  	  <p>Enter test size </p> 
+	       	  <input type="text" name="testSize" id="testSize" required="required" ><br/> 
+		  <br/>
+		  <input type="submit" class="btn-info" value="Predict">
+		</form>
+	</div>
+
+	<div class="ml-container">
+		<form action="{{ url_for('retrain')}}" method="POST">
+	        	<p>Enter Your Title Message Here For Re-train</p>
+	 	  <input type="text" name="message" id="message" required="required"><br/>
+	  	  <p>Enter test size </p> 
+	       	  <input type="text" name="testSize" id="testSize" required="required" ><br/> 
+		  <br/>
+		  <input type="submit" class="btn-info" value="Retrain">
+		
+		</form>
+	</div>
+
+<div calss="results">
+<h2 style="color:blue;">F1 score : {{prediction}} </h2>
+<br>
+<h2 style="color:blue;">Accuracy : {{accuracy}} </h2>
+<br>
+<h2 style="color:blue;">Classification Report : {{ clf_report }}
+</div>
+
+	
+
+</body>
+</html>

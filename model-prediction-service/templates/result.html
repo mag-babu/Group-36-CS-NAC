@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+            <div id="brandname"><h2>Machine Learning App with Flask</h2></div>
+            <h2>IIITH - Great Learning Capstone Project</h2>
+            <h2>News Article Classifier</h2>
+	    </div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for given title</b></p>
+	<div class="results">
+        <h2 style="color:blue;">{{prediction}}</h2>
+
+	</div>
+    <div class="ml-container">
+		<form action="{{ url_for('home')}}" >
+			<input type="submit" class="btn-info" value="Back">
+		</form>
+	</div>
+</body>
+</html>
