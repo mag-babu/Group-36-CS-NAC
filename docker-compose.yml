@@ -82,21 +82,4 @@ services:
       - CORE_CONF_fs_defaultFS=hdfs://namenode:8020
     ports:
       - 8081:8081
-    
-  webapp:
-    deploy:
-      replicas: 1
-    build: webapp
-    container_name: webapp
-    ports:
-      - "80:80"
- 
-
-  webapi:
-    deploy:
-      replicas: 1
-    build: Webapi
-    container_name: webapi
-    ports:
-      - "5000:5000"
    
