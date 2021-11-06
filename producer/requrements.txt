@@ -1,11 +1,9 @@
-pip install requests
-pip install json
-pip install KafkaProducer
-pip install mysql.connector
-pip install time
-pip install pandas
-pip install sys
-pip install random
+requests==2.26.0
+json==0.2.9
+KafkaPython==2.0.2
+pandas==1.1.5
+
+
 
 
 
