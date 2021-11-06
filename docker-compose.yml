@@ -38,7 +38,7 @@ services:
   producer:
     deploy:
       replicas: 1
-    build: Producer
+    build: producer
     container_name: producer
     depends_on:
       kafka:
@@ -50,7 +50,7 @@ services:
   consumer:
     deploy:
       replicas: 1
-    build: Consumer
+    build: consumer
     container_name: consumer
     hostname: driver
     depends_on:
