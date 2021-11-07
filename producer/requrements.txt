@@ -1,5 +1,5 @@
 requests==2.26.0
-json==0.2.9
+json2
 KafkaPython==2.0.2
 pandas==1.1.5
 
