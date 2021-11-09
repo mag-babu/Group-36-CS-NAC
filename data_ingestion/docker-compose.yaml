@@ -33,15 +33,6 @@ services:
       - "8081:8081"
     environment:
       - "SPARK_MASTER=spark://spark-master:7077"
-
-  producer:
-    build: .
-    environment: 
-      BROKER: kafka:9092
-    command: sh -c "spark-submit --master spark://spark-master:7077 static_producer.py"
-    depends_on: 
-      - spark-master
-      - kafka
   db:
     image: mysql:8.0.19
     command: '--default-authentication-plugin=mysql_native_password'
@@ -50,6 +41,14 @@ services:
       - db-password
     volumes:
       - db-data:/var/lib/mysql 
+  producer:
+    build: .
+    environment: 
+      BROKER: kafka:9092
+    command: sh -c "spark-submit --master spark://spark-master:7077 static_producer.py"
+    depends_on: 
+      - spark-master
+      - kafka
       
   consumer:
     build: .
@@ -61,8 +60,8 @@ services:
       - kafka
       - producer
       - db
-  volumes:
-    db-data:
-  secrets:
-    db-password:
-      file: password.txt
+volumes:
+  db-data:
+secrets:
+  db-password:
+    file: password.txt
