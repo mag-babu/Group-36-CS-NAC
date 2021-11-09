@@ -60,6 +60,7 @@ services:
       - spark-master
       - kafka
       - producer
+      - db
   volumes:
     db-data:
   secrets:
