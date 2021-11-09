@@ -1,0 +1,4 @@
+requests
+json2
+kafka-python
+pandas
