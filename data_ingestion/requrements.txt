@@ -3,3 +3,4 @@ json2
 mysql.connector
 pandas
 kafka-python
+pyspark
