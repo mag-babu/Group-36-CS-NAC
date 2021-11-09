@@ -2,7 +2,3 @@ requests
 json2
 mysql.connector
 pandas
-
-
-
-
